@@ -1,0 +1,99 @@
+.hero {
+    video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.feature {
+    &__item-wrapper {
+        display: grid;
+        gap: 26px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    &__item {
+        box-shadow: 0 0 8px 4px #ccc;
+        transition: all 0.3s ease;
+        img {
+            widows: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+    }
+    &__item-content {
+        padding: 30px;
+        border: 1px solid #CCC;
+        border-top: none;
+    }
+    &__item-category {
+        padding-bottom: 20px;
+        @include font-size(12);
+    }
+    &__item-text {
+        padding-bottom: 33px;
+    }
+    &__item-date {
+        @include font-size(12);
+        text-align: right;
+    }
+}
+
+.contact {
+    margin-top: 82px;
+    background-color: $color-background-black;
+    &__title {
+        padding-top: 39px;
+        color: $color-text-white;
+    }
+    &__contents {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 77px;
+        @include mq(md) {
+            flex-direction: column;
+            padding-bottom: 70px;
+        } 
+    }
+    &__meta {
+        width: 40%;
+        @include mq(md) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+    &__text {
+        color: $color-text-white;
+        &:not(:last-child) {
+            padding-bottom: 30px;
+        }
+    }
+    &__form {
+        width: 40%;
+        @include mq(md) {
+            width: 100%;
+        }
+        dl {
+            dt {
+                padding-bottom: 1px;
+                color: $color-text-white;
+            }
+            dd {
+                &:not(:last-child) {
+                    padding-bottom: 19px;
+                }
+                &:last-child {
+                    padding-bottom: 24px;
+                }
+                input {
+                    width: 100%;
+                    padding: 10px 4px;
+                }
+                textarea {
+                    width: 100%;
+                    height: 68px;
+                    padding: 10px 4px;
+                }
+            }
+        }
+    }
+}

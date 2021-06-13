@@ -1,0 +1,28 @@
+.c-btn {
+    display: inline-block;
+    text-align: center;
+    color: $color-text-white;
+    max-width: 100%;
+    padding: 14px 80px;
+    @include font-size(14.4);
+    transition-duration: 2s;
+    transition: all .3s ease-out;
+    background-color: $color-background-black;
+    border: 1px solid $color-text-white;
+    @include mq(md) {
+        width: 100%;
+    }
+
+    &:hover {
+        background-color: $color-background-white;
+        color: $color-text-black;
+    }
+}
+
+.c-btn-area {
+    text-align: left;
+}
+
+// <div class="c-btn-area">
+//     <a href="contact.html" class="c-btn c-btn--flame">CONTACT</a>
+// </div>

@@ -1,0 +1,50 @@
+$breakpoints: (
+    // スマホ
+    "md" : "screen and (max-width: 768px)",
+    // タブレット
+    "lg" : "screen and (max-width: 960px)",
+    // PC
+    "xl" : "screen and (max-width: 1140px)",
+) !default;
+// メディアクエリ
+@mixin mq ($breakpoint: md) {   
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+// 背景画像
+@mixin background-image($fileName) {
+    background-image: url($PATH_IMG + $fileName);
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position: 50% 50%;
+    @content;
+}
+
+// 子要素上下中央ぞろえ
+@mixin center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// テキスト要素の先頭行だけline-heightを取り除き、上ぴったりに揃える
+@mixin lhCrop($line-height) {
+    &::before {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-top: calc((1 - #{$line-height}) * 0.5em);
+    }
+    // 実行時
+    // @include lhCrop(line-height);
+}
+
+// ブラウザの文字サイズに合わせてremの値を出す
+@mixin font-size($size: 24, $base: 16) {
+    font-size: $size + px;
+    font-size: ($size / $base) * 1rem;
+}

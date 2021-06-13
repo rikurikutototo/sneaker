@@ -1,0 +1,12 @@
+.u-sp-only {
+    display: none;
+    @include mq(md) {
+        display: block;
+    }
+}
+
+.u-fadeIn {
+    opacity : 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}

@@ -1,0 +1,21 @@
+.l-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 800;
+    display: flex;
+    align-items: center;
+    background-color: $color-background-white;
+    &__inner {
+        padding: 22px 40px;
+    }
+    &__logo {
+        width: 175px;
+        height: 35.25px;
+    }
+    &__nav-list {
+        display: flex;
+
+    }
+}

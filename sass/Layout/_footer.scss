@@ -1,0 +1,9 @@
+.l-footer {
+    background-color: $color-background-black;
+    &__copyright {
+        padding-bottom: 15px;
+        color: $color-text-white;
+        text-align: center;
+        @include font-size(12);
+    }
+}

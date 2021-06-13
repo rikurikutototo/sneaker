@@ -1,0 +1,43 @@
+// 日本語フォント
+$font-jp: '', sans-serif;
+// 英語フォント
+$font-en: '', sans-serif;
+
+html {
+    // 文字サイズがブラウザの種類や状態によって変可変
+    font-size: 100%;
+}
+
+body {
+    font-family: $font-jp $font-en;
+    line-height: 1.7;
+    color: $color-text-black;
+    box-sizing: border-box;
+    
+    // 基本の文字サイズの設定
+    @include font-size(16);
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    transition: .3s;
+}
+
+// ユーザーが文章を選択したときのエフェクト
+::selection {
+    background-color: rgb(168, 166, 166);
+    color: #fff;
+}
+
+
+img {
+    // imgタグの下の隙間なくす
+    vertical-align: top;
+    // 親要素より大きくならないように設定
+    max-width: 100%;
+    // 幅に合わせて高さも自動調整
+    height: auto;
+    width: 100%;
+}
+
